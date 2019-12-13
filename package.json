@@ -1,0 +1,81 @@
+{
+  "name": "@vnukovo3/pos",
+  "version": "1.2.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.com/vnukovo3/pos.git"
+  },
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "test": "jest",
+    "postinstall": "rndebugger-open",
+    "dev": "export ENVFILE=config/.env.dev && react-native run-android",
+    "build-dev": "export ENVFILE=config/.env.dev && react-native run-android --variant=release",
+    "build-prod": "export ENVFILE=config/.env.production && react-native run-android --variant=release",
+    "release-dev": "./upload_dev.sh",
+    "release-prod": "./upload_prod.sh",
+    "version": "node scripts/setVersion",
+    "log": "react-native log-android",
+    "commit": "git-cz"
+  },
+  "dependencies": {
+    "axios": "^0.15.3",
+    "flat": "^2.0.1",
+    "geolib": "^2.0.22",
+    "jwt-decode": "^2.1.0",
+    "lodash": "^4.17.4",
+    "moment": "^2.17.1",
+    "moment-timezone": "^0.5.11",
+    "native-base": "^2.1.1",
+    "react": "^16.0.0-alpha.6",
+    "react-native": "^0.43.1",
+    "react-native-background-timer": "^1.0.0",
+    "react-native-code-push": "latest",
+    "react-native-config": "^0.3.1",
+    "react-native-device-info": "^0.9.9",
+    "react-native-drawer": "^2.3.0",
+    "react-native-fs": "^2.1.0-rc.1",
+    "react-native-hr": "git+https://github.com/Riglerr/react-native-hr.git",
+    "react-native-install-apk": "^1.0.0",
+    "react-native-keyboard-aware-scrollview": "^1.1.5",
+    "react-native-mauron85-background-geolocation": "^0.2.0-alpha.6",
+    "react-native-modal-datetime-picker": "^4.1.0",
+    "react-native-onesignal": "^3.0.3",
+    "react-native-orientation": "git+https://git@github.com/yamill/react-native-orientation.git",
+    "react-native-progress": "^3.2.0",
+    "react-native-restart": "^0.0.2",
+    "react-native-snackbar": "^0.3.1",
+    "react-native-sound": "^0.9.0",
+    "react-native-splash-screen": "^2.0.0",
+    "react-native-tabs": "^1.0.9",
+    "react-native-vector-icons": "^4.0.1",
+    "react-navigation": "git+https://github.com/react-community/react-navigation.git",
+    "react-redux": "^5.0.3",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.2.0",
+    "semver-compare": "^1.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.1",
+    "babel-jest": "18.0.0",
+    "babel-preset-react-native": "1.9.1",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
+    "cz-conventional-changelog-lint": "^0.1.3",
+    "eslint": "^3.15.0",
+    "eslint-plugin-react": "^6.9.0",
+    "eslint-plugin-react-native": "^2.2.1",
+    "jest": "18.1.0",
+    "react-native-debugger-open": "^0.3.2",
+    "react-test-renderer": "~15.4.0-rc.4"
+  },
+  "jest": {
+    "preset": "react-native"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-lint"
+    }
+  }
+}

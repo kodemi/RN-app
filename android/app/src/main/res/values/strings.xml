@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Внуково-3</string>
+    <string name="account_type">ru.vnukovo3.account</string>
+    <string name="content_authority">ru.vnukovo3.authority</string>
+</resources>
